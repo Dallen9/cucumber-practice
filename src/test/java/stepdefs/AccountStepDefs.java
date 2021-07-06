@@ -1,18 +1,27 @@
-package stepDefinitions;
+package stepdefs;
 
 import io.cucumber.datatable.DataTable;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
-public class MyStepdefs {
+public class AccountStepDefs {
+
     @Given("^User is on NetBanking landing page$")
     public void user_is_on_netbanking_landing_page() throws Throwable {
         //code to navigate to login url
-            System.out.println("mobile automation");
+//        try {
+//            TimeUnit.SECONDS.sleep(1);
+//            System.out.println("mobile automation");
+//        } catch (InterruptedException ie) {
+//            Thread.currentThread().interrupt();
+//        }
+        System.out.println("mobile automation");
     }
 
     @When("^User login into application with \"([^\"]*)\" and \"([^\"]*)\"$")

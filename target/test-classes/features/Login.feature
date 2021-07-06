@@ -1,5 +1,11 @@
 Feature: Application Login
 
+# Hooks and background cannot be used to together
+#  Background:
+#    Given validate the browser
+#    When Browser is triggered
+#    Then Check if browser is displayed
+
   @RegTest
   Scenario: Home page default login
     Given User is on NetBanking landing page
@@ -7,7 +13,7 @@ Feature: Application Login
     Then Home page is populated
     And Cards displayed are "true"
 
-  @SmokeTest
+  @MobileTest
   Scenario: Home page default login
     Given User is on NetBanking landing page
     When User login into application with "doe" and "123445"
@@ -15,7 +21,7 @@ Feature: Application Login
     And Cards displayed are "false"
 
   # Data table
-  @SmokeTest
+  @WebTest
   Scenario: Home page default login
     Given User is on NetBanking landing page
     When User sign up with following details
@@ -23,6 +29,7 @@ Feature: Application Login
     Then Home page is populated
     And Cards displayed are "true"
 
+  # Test multiple fields with Example keyword (Parameterizing testing)
   @RegTest
   Scenario Outline: Home page default login
     Given User is on NetBanking landing page
