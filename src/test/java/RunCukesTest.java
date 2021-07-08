@@ -5,6 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 //Tags allow you to only run testcases specify with the tag defined
 //@RunWith(Cucumber.class)
 
-@CucumberOptions( features = "src/test/resources/features", glue = "stepdefs", tags = "@MobileTest or @WebTest", monochrome = true)
+@CucumberOptions( features = "src/test/resources/features", glue = "stepdefs",
+        tags = "@MobileTest or @WebTest", monochrome = true, plugin = {"pretty", "html:target/cucumber.html"})
 public class RunCukesTest extends AbstractTestNGCucumberTests {
 }
