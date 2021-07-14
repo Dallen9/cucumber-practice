@@ -6,6 +6,6 @@ import io.cucumber.testng.CucumberOptions;
 //@RunWith(Cucumber.class)
 
 @CucumberOptions( features = "src/test/resources/features", glue = "stepdefs",
-        tags = "@MobileTest or @WebTest", monochrome = true, plugin = {"pretty", "html:target/cucumber.html"})
+        tags = "@MobileTest or @WebTest", plugin = {"pretty", "html:target/cucumber.html"})
 public class RunCukesTest extends AbstractTestNGCucumberTests {
 }
